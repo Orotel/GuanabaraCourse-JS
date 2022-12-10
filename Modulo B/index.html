@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Dom</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            color: wheat;
+            font: normal 25pt Arial;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="inicio">Iniciando DOM</h1>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim</div>
+<script>
+    let corpo = window.document.body
+    let p1 = window.document.getElementsByTagName('p')[0]
+    p1. style.color = 'red'
+    corpo.style.color = 'yellow'
+    let d = window.document.getElementById('msg')
+    d.style.background = 'green'
+    d.innerText='estou waiting'
+    let j= window.document.querySelector('h1.inicio')
+    j.style.color='black'
+</script>
+</body>
+</html>
