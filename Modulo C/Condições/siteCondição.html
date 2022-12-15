@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>sistemas de multas de CARRO</h1>
+    velocidade do carro: <input type="number" name="" id="txtvel">KM/H
+    <input type="button" value="Verificar" id = "verificador">
+    <div id ='res'></div>
+<script>
+    // aprendendo a usar o DOM no site
+let verificador = window.document.querySelector('#verificador')
+let txtvel = window.document.querySelector('#txtvel')
+let res = window.document.querySelector("#res")
+verificador.addEventListener('click',calcular)
+
+
+function calcular() {
+    let velocidade = Number(txtvel.value)
+    res.innerHTML= `a sua velocidade é ${velocidade}KM/H `
+    if(velocidade > 60){
+        res.innerHTML+= 'Voce foi multado'
+    }
+    res.innerHTML+=',diriga sempre com sinto de segurança'
+
+}
+</script>
+</body>
+</html>
